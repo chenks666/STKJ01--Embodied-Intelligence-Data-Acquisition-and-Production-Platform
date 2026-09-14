@@ -1,0 +1,133 @@
+/* ============================================================
+   具身智能数据生产平台 · 设计令牌
+   工业控制台方向：石墨深色底 + 中性冷蓝交互色 + 语义状态色
+   无渐变、无毛玻璃、无胶囊按钮；圆角统一 3–6px，边框 1px 实线
+   ============================================================ */
+
+:root {
+  /* ---- 表面层级 ---- */
+  --bg:          #0a0c0f;
+  --surface-0:   #0e1116;
+  --surface-1:   #131720;
+  --surface-2:   #191e28;
+  --surface-3:   #20262f;
+  --surface-inset: #080a0d;
+
+  /* ---- 描边 ---- */
+  --line:        #242b36;
+  --line-soft:   #1a2029;
+  --line-strong: #333c4a;
+
+  /* ---- 文字 ---- */
+  --text:        #e6eaf0;
+  --text-2:      #98a3b2;
+  --text-3:      #79828f;   /* 三级文字：与 surface-1 对比度 ≈4.6:1（小字达 AA） */
+  --text-4:      #4a5361;
+  --text-invert: #0a0c0f;
+
+  /* ---- 交互主色（冷蓝，平面无渐变） ---- */
+  --accent:      #4c8dff;
+  --accent-hi:   #6ba0ff;
+  --accent-dim:  #1b3358;
+  --accent-line: #2b4f88;
+
+  /* ---- 语义状态 ---- */
+  --ok:        #34d399;   /* 通过 */
+  --ok-dim:    #12352a;
+  --warn:      #f4b740;   /* 有条件通过 / 注意 */
+  --warn-dim:  #3a2f14;
+  --danger:    #f2555a;   /* 不通过 / 驳回 */
+  --danger-dim:#3a1a1d;
+  --block:     #ff7a45;   /* 阻塞 */
+  --block-dim: #3a2318;
+  --review:    #4fa8d8;   /* 转复核 / 待判 */
+  --review-dim:#122c3a;
+
+  /* ---- 角色 / 域识别色（低饱和，仅作标记） ---- */
+  --domain-a: #4c8dff;
+  --domain-b: #4fa8d8;
+  --domain-c: #7fc98b;
+  --domain-d: #f4b740;
+  --domain-e: #9d8bf0;
+  --domain-f: #e08a6b;
+  --domain-g: #7d8896;
+  --domain-h: #d0a24f;
+
+  /* ---- 排版 ---- */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+               "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC",
+               "Noto Sans SC", "Microsoft YaHei", sans-serif;
+  --font-mono: ui-monospace, "SF Mono", "JetBrains Mono", "Cascadia Mono",
+               Consolas, Menlo, monospace;
+
+  /* 字号阶梯（桌面端） */
+  --fs-11: 11px;
+  --fs-12: 12px;
+  --fs-13: 13px;
+  --fs-14: 14px;
+  --fs-16: 16px;
+  --fs-19: 19px;
+  --fs-23: 23px;
+  --fs-29: 29px;
+
+  /* ---- 尺寸 ---- */
+  --radius:    4px;
+  --radius-sm: 3px;
+  --radius-lg: 6px;
+  --topbar-h:  52px;
+  --nav-w:     216px;
+  --nav-w-min: 56px;
+
+  /* ---- 动效（仅状态变化，150–400ms） ---- */
+  --ease: cubic-bezier(.2, .7, .3, 1);
+  --t-fast:  150ms var(--ease);
+  --t-base:  220ms var(--ease);
+  --t-slow:  400ms var(--ease);
+
+  --shadow-pop: 0 8px 28px rgba(0, 0, 0, .55);
+  --grid-line:  color-mix(in srgb, var(--line) 52%, transparent);
+  color-scheme: dark;
+}
+
+/* ============================================================
+   明色主题（一键切换）
+   ============================================================ */
+[data-theme="light"] {
+  --bg:          #f4f5f7;
+  --surface-0:   #ffffff;
+  --surface-1:   #fafbfc;
+  --surface-2:   #f1f3f6;
+  --surface-3:   #e7eaef;
+  --surface-inset: #eef0f4;
+
+  --line:        #dfe3ea;
+  --line-soft:   #eaeef3;
+  --line-strong: #c6cdd8;
+
+  --text:        #14181f;
+  --text-2:      #5a6473;
+  --text-3:      #6a7280;   /* 三级文字：与 surface-1 对比度 ≈4.7:1（小字达 AA） */
+  --text-4:      #a3abb7;
+  --text-invert: #ffffff;
+
+  --accent:      #2563eb;
+  --accent-hi:   #1d4ed8;
+  --accent-dim:  #dbe7fe;
+  --accent-line: #b7cdfa;
+
+  --ok:        #0f9d63;
+  --ok-dim:    #dff3ea;
+  --warn:      #b8791a;
+  --warn-dim:  #fbf0d9;
+  --danger:    #d93a40;
+  --danger-dim:#fbe2e3;
+  --block:     #d9601f;
+  --block-dim: #fbe6dc;
+  --review:    #1f7fa8;
+  --review-dim:#dceff7;
+
+  --domain-g: #5c6675;
+  --shadow-pop: 0 8px 24px rgba(20, 24, 31, .14);
+  --grid-line:  #e4e8ee;
+  color-scheme: light;
+}
